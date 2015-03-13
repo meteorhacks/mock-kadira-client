@@ -1,0 +1,11 @@
+{
+  "name": "mock-kadira-client",
+  "version": "1.0.0",
+  "description": "Mock client to load test kadira engine",
+  "main": "index.js",
+  "author": "Meteorhacks",
+  "license": "MIT",
+  "dependencies": {
+    "request": "2.53.x"
+  }
+}

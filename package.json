@@ -6,6 +6,10 @@
   "author": "Meteorhacks",
   "license": "MIT",
   "dependencies": {
-    "request": "2.53.x"
+    "request": "2.53.x",
+    "uuid": "2.0.x"
+  },
+  "engines": {
+    "node": "0.12.x"
   }
 }

@@ -19,14 +19,14 @@ function Client (appId, appSecret, host) {
 Client.prototype.start = function(endpoint) {
   var self = this;
 
-  var startupDelay = Math.floor(1000*10 * Math.random());
+  var startupDelay = Math.floor(1000*20 * Math.random());
 
   setTimeout(function() {
     self.send(endpoint);
 
     setInterval(function() {
       self.send(endpoint);
-    }, 1000*10);
+    }, 1000*20);
   }, startupDelay);
 };
 

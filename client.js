@@ -33,16 +33,20 @@ Client.prototype.start = function(endpoint) {
 
 
 Client.prototype.send = function(endpoint) {
-  var cb = Function.prototype;
   var data = this._createPayload();
-
-  request({
+  var opts = {
     url: endpoint,
     method: 'POST',
     headers: this.headers,
     body: data,
     json: true,
-  }, cb);
+  };
+
+  request(opts, function (err) {
+    if(err) {
+      console.error(err);
+    }
+  });
 };
 
 

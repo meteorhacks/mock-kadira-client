@@ -6,6 +6,7 @@ function Client (appId, appSecret, host) {
   this.appId = appId;
   this.appSecret = appSecret;
   this.host = host;
+  this.interval = 1000*20;
 
   this.methods = this._createMethodNames();
   this.pubs = this._createPubNames();
@@ -19,14 +20,14 @@ function Client (appId, appSecret, host) {
 Client.prototype.start = function(endpoint) {
   var self = this;
 
-  var startupDelay = Math.floor(1000*20 * Math.random());
+  var startupDelay = Math.floor(this.interval * Math.random());
 
   setTimeout(function() {
     self.send(endpoint);
 
     setInterval(function() {
       self.send(endpoint);
-    }, 1000*20);
+    }, self.interval);
   }, startupDelay);
 };
 

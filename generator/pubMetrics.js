@@ -2,11 +2,6 @@ module.exports = function (ts, names) {
   var pubs = {};
 
   for(var i=0; i<names.length;++i) {
-
-    if(Math.random() < 0.5) {
-      continue;
-    }
-
     pubs[names[i]] = {
       subs: Math.floor(50 * Math.random()),
       unsubs: Math.floor(50 * Math.random()),

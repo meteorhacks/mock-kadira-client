@@ -15,7 +15,7 @@ ENDPOINTS.forEach(function (endpoint) {
     var appId = APP_ID || 'test-app-' + Math.floor(MAX_CLIENTS * Math.random());
     var appSecret = APP_SECRET || 'test-app-secret';
     var hostname = 'host-' + Math.floor(Math.random() * 1000000000);
-    var client = new Client(appId, appSecret, hostname);
-    client.start(endpoint);
+    var client = new Client(appId, appSecret, hostname, endpoint);
+    client.start();
   }
 });

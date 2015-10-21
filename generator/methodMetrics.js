@@ -2,11 +2,6 @@ module.exports = function (ts, names) {
   var methods = {};
 
   for(var i=0; i<names.length;++i) {
-
-    if(Math.random() < 0.5) {
-      continue;
-    }
-
     methods[names[i]] = {
       wait: Math.floor(100 * Math.random()),
       db: Math.floor(300 * Math.random()),

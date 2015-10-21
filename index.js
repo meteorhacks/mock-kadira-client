@@ -1,7 +1,7 @@
 var Client = require('./client');
 
 if(!process.env.ENDPOINTS) {
-  process.exit('Pease set `ENDPOINTS` environment variable');
+  process.env.ENDPOINTS = 'http://localhost:11011';
 }
 
 var MAX_CLIENTS = 1000;

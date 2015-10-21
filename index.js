@@ -4,7 +4,7 @@ if(!process.env.ENDPOINTS) {
   process.env.ENDPOINTS = 'http://localhost:11011';
 }
 
-var MAX_CLIENTS = 1000;
+var MAX_CLIENTS = 10000;
 var NUM_CLIENTS = parseInt(process.env.N) || 1;
 var ENDPOINTS = process.env.ENDPOINTS.split(',');
 var APP_ID = process.env.APP_ID;

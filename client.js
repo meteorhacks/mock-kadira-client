@@ -69,6 +69,7 @@ Client.prototype.send = function() {
     }
 
     stats.inc(TOTAL_METRICS);
+    stats.dur(Date.now()-time);
   });
 };
 

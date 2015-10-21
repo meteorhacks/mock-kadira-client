@@ -6,7 +6,7 @@ function Client (appId, appSecret, host) {
   this.appId = appId;
   this.appSecret = appSecret;
   this.host = host;
-  this.interval = 1000*20;
+  this.interval = 1000*10;
 
   this.methods = this._createMethodNames();
   this.pubs = this._createPubNames();
